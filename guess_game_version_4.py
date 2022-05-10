@@ -47,6 +47,9 @@ while guessing != num:
     #print(num) #uncomment this to see the number selected
     guessing = input("Please guess a number: ")
     guessing = check_int_number(guessing)
+    if guessing > max_range:
+        print("The number you have entered is greater than max_range.")
+        continue
     no_of_attempts += 1
     if guessing == num: # If guess is correct, congratulate player 
         no_of_games_played += 1
