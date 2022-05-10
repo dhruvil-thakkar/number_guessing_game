@@ -10,6 +10,7 @@ import random
 import os
 
 # Greet the player.
+os.system('clear')
 player_name = input("Enter your name: ")
 print("Welcome to the guessing number game", player_name)
 
