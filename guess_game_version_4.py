@@ -7,6 +7,7 @@
 
 # Import random module for randint function
 import random
+import os
 
 # Greet the player.
 player_name = input("Enter your name: ")
@@ -58,6 +59,7 @@ while guessing != num:
         while again not in ['Yes', 'Y', 'y', 'N', 'n', 'No','YES','no']:
             again = input("Do you want to play again? Enter Yes or No or Y or N: ")
             if again.lower() == 'y' or again.lower() == 'yes':
+                os.system('clear')
                 user_max_range = input("Enter a max range: ")
                 max_range = check_int_number(user_max_range)
                 print("We will play the numbers between 1 to", max_range)
@@ -73,4 +75,5 @@ while guessing != num:
         print("Tuff luck, sorry. Your guess is too high. Please try again! This was attempt number:",no_of_attempts)
     else:
         print("Tuff luck, sorry. Your guess is too low. Please try again! This was attempt number:",no_of_attempts)
+
 
